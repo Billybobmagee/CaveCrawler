@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://djxogo1sbf1xh"]
+[gd_scene load_steps=2 format=3 uid="uid://djxogo1sbf1xh"]
+
+[ext_resource type="Script" path="res://Quit.gd" id="1_ijkkt"]
 
 [node name="main" type="Node2D"]
+
+[node name="Play" type="Button" parent="."]
+offset_left = 298.0
+offset_top = 17.0
+offset_right = 773.0
+offset_bottom = 298.0
+text = "play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 297.0
+offset_top = 331.0
+offset_right = 772.0
+offset_bottom = 612.0
+text = "dont"
+script = ExtResource("1_ijkkt")
+
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
